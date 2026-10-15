@@ -1,0 +1,48 @@
+{
+  "policy_id": "pfb6e942e",
+  "title": "西安市人民政府办公厅关于印发建立健全职工基本医疗保险门诊共济保障机制实施方案的通知",
+  "target_group": [
+    "职工医保参保人员",
+    "职工医保全体参保人员",
+    "在职职工",
+    "退休人员",
+    "参保人员本人及其配偶、父母、子女"
+  ],
+  "benefit": [
+    {
+      "type": "个人账户计入",
+      "standard": "计入标准为本人参保缴费基数的2%",
+      "condition": "在职职工"
+    },
+    {
+      "type": "个人账户计入",
+      "standard": "划入额度为我市2022年基本养老金平均水平的2%左右",
+      "condition": "退休人员"
+    },
+    {
+      "type": "费用减免",
+      "standard": "政策范围内统筹基金支付比例不低于50%",
+      "condition": "职工医保普通门诊统筹参保人员"
+    }
+  ],
+  "materials": [],
+  "process": [],
+  "handler": "",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "医疗",
+  "region": "西安市",
+  "eligibility_rules": [
+    {
+      "field": "insurance",
+      "op": "eq",
+      "value": "职工医保",
+      "desc": "参加职工基本医疗保险"
+    }
+  ],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 2950
+}

@@ -1,0 +1,38 @@
+# Render 蓝图：把仓库连上 Render 就能一键起服务，不用在控制台点选各项配置。
+#
+# 用法见 DEPLOY.md。注意下面 sync: false 的四项**不会**写进仓库，
+# 需要在 Render 控制台里逐个填——密钥不进代码库是硬规矩。
+services:
+  - type: web
+    name: minan-policy-agent
+    runtime: docker
+    plan: free
+    # 新加坡离大陆最近。免费档可选，比默认的 Oregon 快得多。
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    # 必须指到 /healthz。默认探 /，而未登录时 / 会 302 到登录页，
+    # 有的探测器把 3xx 当失败，会判不健康并反复重启。
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: POLICY_AGENT_HOST
+        value: 0.0.0.0
+
+      # ↓↓↓ 以下四项在 Render 控制台填写，不写在这里 ↓↓↓
+
+      # DeepSeek 的 API Key。务必用专门的 key——config.py 在没有
+      # DEEPSEEK_API_KEY 时会回退去读 ANTHROPIC_AUTH_TOKEN，
+      # 那可能正是你 Claude Code 在用的凭证。
+      - key: DEEPSEEK_API_KEY
+        sync: false
+
+      # 交给评委的登录账号与密码
+      - key: POLICY_AGENT_USER
+        sync: false
+      - key: POLICY_AGENT_PASS
+        sync: false
+
+      # token 签名密钥。让 Render 随机生成，别用固定值。
+      # 不设的话每次重启都会换一个，所有已登录的人被登出。
+      - key: POLICY_AGENT_SECRET
+        generateValue: true

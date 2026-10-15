@@ -1,0 +1,60 @@
+# 民安 · 民生政策语料源清单
+# 每行一个 URL，# 开头为注释。
+# 全部条目均由 scripts 实测：HTTP 200 + 服务端渲染（无需 JS）+ 正文汉字 > 800。
+#
+# 用法：
+#   python -m ingest.build --urls urls.txt              # 抓取 + 解析
+#   python -m ingest.build --urls urls.txt --structure  # 并做 LLM 结构化抽取
+
+# ─────────────────────────────────── 国家层面：中国政府网（正文容器 UCAP-CONTENT）
+# 低保 / 社会救助
+https://www.gov.cn/zhengce/zhengceku/2021-07/29/content_5628296.htm
+https://www.gov.cn/zhengce/zhengceku/202403/content_7007237.htm
+https://www.gov.cn/zhengce/zhengceku/2022-11/09/content_5725541.htm
+# 特困人员
+https://www.gov.cn/zhengce/zhengceku/2021-05/09/content_5605472.htm
+# 临时救助
+https://www.gov.cn/zhengce/zhengceku/2014-10/24/content_9165.htm
+https://www.gov.cn/zhengce/zhengceku/202601/content_7056503.htm
+# 残疾人两项补贴
+https://www.gov.cn/zhengce/zhengceku/2022-10/29/content_5722448.htm
+# 养老服务
+https://www.gov.cn/zhengce/zhengceku/202507/content_7033332.htm
+https://www.gov.cn/zhengce/zhengceku/202607/content_7074664.htm
+https://www.gov.cn/zhengce/zhengceku/202604/content_7067394.htm
+# 生育 / 育儿补贴
+https://www.gov.cn/zhengce/zhengceku/202509/content_7041274.htm
+https://www.gov.cn/gongbao/2025/issue_12206/202508/content_7035435.html
+# 住房保障
+https://www.gov.cn/zhengce/zhengceku/2021-07/02/content_5622027.htm
+# 医保
+https://www.gov.cn/zhengce/zhengceku/202408/content_6965742.htm
+# 就业创业补贴
+https://www.gov.cn/zhengce/zhengceku/202401/content_6926462.htm
+
+# ─────────────────────────────────── 北京市（正文容器 mainText）
+https://www.beijing.gov.cn/zhengce/zhengcefagui/202602/t20260206_4495163.html
+https://www.beijing.gov.cn/zhengce/zhengcefagui/202605/t20260527_4668304.html
+https://www.beijing.gov.cn/zhengce/zhengcefagui/202605/t20260527_4668312.html
+https://www.beijing.gov.cn/zhengce/zhengcefagui/202605/t20260520_4659144.html
+
+# ─────────────────────────────────── 上海市（正文容器 article）
+https://www.shanghai.gov.cn/202411bmgfxwj/20240612/5df35664fcef4e1c939c938327b78503.html
+http://service.shanghai.gov.cn/xingzhengwendangkujyh/XZGFDetails.aspx?docid=240911170335fGtg8f5IhVHq0vJ6Uh2
+https://www.shanghai.gov.cn/202419bmgfxwj/20241016/e01a701c85fc48a6b4a6c8eacbcc6377.html
+https://www.shanghai.gov.cn/gwk/search/content/0244e1c12c21473a951c03f36fe98363
+https://www.shanghai.gov.cn/lnshjzsjzc/20230404/b326aaa226054a9ca5d70939f28fff97.html
+https://www.shanghai.gov.cn/nw12344/20260924/8304f2a133fb4541b7f3d9811fa4bcbd.html
+https://cdn.shanghai.gov.cn/nw12344/20251126/a8f8ef37b9a74a8090b51abbcb3a44bf.html
+
+# ─────────────────────────────────── 区县层面（最贴近社区场景）
+https://www.jjq.gov.cn/openness/public/6606211/40023643.html
+https://scnj.gov.cn/ztzl/jczwgkzl/gkly/shjz/zhyw/zcfgwj/13994304.html
+https://www.yuan.gov.cn/public/6597041/25085908.html
+https://ahqy.gov.cn/OpennessContent/show/1686180.html
+http://www.lukou.gov.cn/c24518/20250811/i2408746.html
+
+# ─────────────────────────────────── 其他省市
+https://www.zhuji.gov.cn/art/2025/9/1/art_1229075074_59164675.html
+https://hlj.gov.cn/hlj/c108373/202201/c00_31184001.shtml
+http://www.rugao.gov.cn/rgzt/ylzcwj/content/7107e99f-42b8-4058-8aae-291f2eb399e4.html

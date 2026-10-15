@@ -1,0 +1,5 @@
+# seed list pages
+https://www.beijing.gov.cn/zhengce/zhengcefagui/
+https://www.mca.gov.cn/
+https://www.nhsa.gov.cn/
+https://www.shanghai.gov.cn/nw12344/index.html

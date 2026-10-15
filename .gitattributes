@@ -1,0 +1,22 @@
+# 换行符统一。Windows 上 core.autocrlf 默认把签出的文件转成 CRLF，
+# 而 Dockerfile 一旦带上 CR 字节，容器构建会以 /bin/sh^M 或
+# exec format error 失败——而且是在 Render 那边才炸，本地怎么试都是好的。
+# 这里直接钉死：进仓库一律 LF，不看平台设置。
+* text=auto eol=lf
+
+Dockerfile      text eol=lf
+.dockerignore   text eol=lf
+.gitignore      text eol=lf
+.gitattributes  text eol=lf
+*.sh            text eol=lf
+
+# Windows 批处理必须 CRLF，否则 cmd 解析会出问题
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+
+# 二进制，别做任何转换
+*.png           binary
+*.jpg           binary
+*.ico           binary
+*.pdf           binary

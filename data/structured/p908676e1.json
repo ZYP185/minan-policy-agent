@@ -1,0 +1,56 @@
+{
+  "policy_id": "p908676e1",
+  "title": "黑龙江省人民政府办公厅关于建立健全职工基本医疗保险门诊共济保障机制的实施意见",
+  "target_group": [
+    "职工基本医疗保险参保人员",
+    "退休人员",
+    "城乡居民基本医疗保险参保人员"
+  ],
+  "benefit": [
+    {
+      "type": "费用减免",
+      "standard": "支付比例一级及以下基层医疗机构为70%、二级医疗机构为60%、三级医疗机构为50%",
+      "condition": "职工医保参保人员普通门诊费用"
+    },
+    {
+      "type": "费用减免",
+      "standard": "退休人员按医疗机构级别相应提高5个百分点",
+      "condition": "退休人员普通门诊费用"
+    },
+    {
+      "type": "费用减免",
+      "standard": "最高支付限额不低于2000元",
+      "condition": "职工医保参保人员普通门诊费用"
+    },
+    {
+      "type": "费用减免",
+      "standard": "在职职工个人账户原则上按照本人参保缴费基数的2%计入",
+      "condition": "在职职工"
+    },
+    {
+      "type": "费用减免",
+      "standard": "退休人员个人账户原则上由统筹基金按定额划入，划入额度逐步调整到统筹地区实施改革当年基本养老金平均水平的2%左右",
+      "condition": "退休人员"
+    }
+  ],
+  "materials": [],
+  "process": [],
+  "handler": "",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "医疗",
+  "region": "黑龙江省",
+  "eligibility_rules": [
+    {
+      "field": "insurance",
+      "op": "eq",
+      "value": "职工基本医疗保险",
+      "desc": "参加职工基本医疗保险"
+    }
+  ],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 3029
+}

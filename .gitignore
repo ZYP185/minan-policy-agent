@@ -1,0 +1,19 @@
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# 环境变量文件里有 API Key，永远不要提交
+.env
+.env.*
+
+# 抓取缓存与自检输出。cache/server_out.txt 里有一行脱敏后的
+# API Key（前 6 位 + 后 4 位），虽然不完整，也不该进仓库。
+data/cache/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini

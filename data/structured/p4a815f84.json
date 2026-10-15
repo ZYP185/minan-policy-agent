@@ -1,0 +1,66 @@
+{
+  "policy_id": "p4a815f84",
+  "title": "上海市人民政府关于完善老年综合津贴制度的通知",
+  "target_group": [
+    "具有本市户籍且年满65周岁的老年人"
+  ],
+  "benefit": [
+    {
+      "type": "现金补贴",
+      "standard": "每人每月75元",
+      "condition": "65-69周岁"
+    },
+    {
+      "type": "现金补贴",
+      "standard": "每人每月150元",
+      "condition": "70-79周岁"
+    },
+    {
+      "type": "现金补贴",
+      "standard": "每人每月180元",
+      "condition": "80-89周岁"
+    },
+    {
+      "type": "现金补贴",
+      "standard": "每人每月350元",
+      "condition": "90-99周岁"
+    },
+    {
+      "type": "现金补贴",
+      "standard": "每人每月600元",
+      "condition": "100周岁及以上"
+    }
+  ],
+  "materials": [],
+  "process": [
+    "市大数据中心根据老年综合津贴发放的业务规则，对符合条件的老年人信息数据开展初步筛选",
+    "经民政部门审核后，形成最终的发放清单",
+    "区民政部门具体负责本行政区域内符合条件的老年人资格审定、老年综合津贴发放和监督管理等工作",
+    "街道办事处和乡镇政府负责老年综合津贴发放相关组织实施工作",
+    "老年综合津贴发放采取按季度预拨的方式，分别于每年1月、4月、7月和10月发放"
+  ],
+  "handler": "区民政部门",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "养老",
+  "region": "上海市",
+  "eligibility_rules": [
+    {
+      "field": "hukou",
+      "op": "eq",
+      "value": "本市户籍",
+      "desc": "具有本市户籍"
+    },
+    {
+      "field": "age",
+      "op": "gte",
+      "value": 65,
+      "desc": "年满65周岁"
+    }
+  ],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 1549
+}

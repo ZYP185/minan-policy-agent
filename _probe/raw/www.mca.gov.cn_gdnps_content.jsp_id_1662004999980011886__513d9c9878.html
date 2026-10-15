@@ -1,0 +1,221 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta name="keywords" content="中华人民共和国民政部政府信息公开,民政部,政府信息公开，政策,政府信息公开指南,政府信息公开制度,法定主动公开内容，政府信息公开年报，民政部文告,转隶部门相关文件">
+	<meta name="description" content="民政部政府信息公开是民政部政策发布、政策解读、主动信息公开的平台，提供政策查询服务。">
+	<meta name="lanmu" content="民政部政府信息公开">
+    <title></title>
+<link href="/gdnps/pc/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link type="text/css" href="/gdnps/pc/css/layout.css" rel="stylesheet" />
+    <link href="/gdnps/pc/css/iconfont.css" type="text/css" rel="stylesheet">
+    <script src="/gdnps/pc/js/jquery.min.js"></script>
+	<script src="/gdnps/pc/js/main.js"></script>
+	<script type="text/javascript" src="/gdnps/pc/js/json2.js"></script>
+	<script type="text/javascript" src="/gdnps/pc/js/index.js"></script>
+	<script type="text/javascript" src="/gdnps/pc/js/content.js"></script>
+		<script type="text/javascript" src="/gdnps/js/layer/layer.js"></script>
+	<script type="text/javascript" src="/gdnps/js/layer/layerUtil.js"></script>
+	<style >
+		.page {width: 660px;}
+		.main {background: #f0f0f0;}
+		#title{padding: 0 15px;}
+		#htmlContent a{color:#087CD6;}
+	</style>
+    <script type="text/javascript">
+
+		    if (isMobile()) {
+	    	var url = window.location.href; 
+	    	url = url.replace('/gdnps/','/gdnps/mobile/');
+			window.location.href=url;
+		} 
+		
+		function isMobile() {
+		  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+		  
+		  // Regular expressions to match mobile user agents
+		  const mobileRegex = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
+		  
+		  // Check if the user agent matches mobile devices
+		  return mobileRegex.test(userAgent.toLowerCase());
+		}
+
+		var filecatStr='';
+		var themecatStr='';
+		var subcatStr='';
+		var infofromStr='';
+		var nbaocatStr='';
+		var mtype='';
+    
+		var appName='/gdnps';
+		var contentId ='1662004999980011886';
+		var appName = '/gdnps';
+    </script>
+</head>
+
+<body>
+<div class="bgbox">
+    <div class="w1100">
+        <div class="header">
+            <h2 class="stywhite txt35"><img src="images/gh.png"/>中华人民共和国民政部</h2>
+            <h1 class="textc stywhite txt100">政府信息公开</h1>
+        </div>
+        <div class="main clearfix" style="background:#F0F0F0">
+            <div class="searchbox clearfix">
+                <div class="fl line w240">--</div>
+                <div class="fl search">
+                    <input type="text" class="ipt w440 fl" id="searchContent"/>
+                    <input type="image" src="pc/images/ss.png" onclick="goSearch();">
+                </div>
+                <div class="fl line w240">--</div>
+            </div>
+            <div class="fr w1024 shaw cont">
+                <h3 class="fontw textc styblue txt32" id="title"></h3>
+                <p class="info txt15 textc">
+                	<span class="fbtime" style="padding-right:10px;">发布时间：<span id="scrq2"></span></span>
+                <span class="fsize">字体：[<a href="javascript:void(0);" onclick="changeFontSize('20');" style="padding-right:4px;">大</a><a href="javascript:void(0);" onclick="changeFontSize('16');" style="padding-right:4px;">中</a><a href="javascript:void(0);" onclick="changeFontSize('12');">小</a>]</span>
+                <span class="sourceFrom" style="margin-left:10px;">来源：<span id="wzly"></span></span>
+</p>
+                <div class="txtbox" style="padding-top: 20px;">
+                    <table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" class="mytable">
+                        <tbody>
+                        <tr>
+                            <td height="15" align="center" class="pmingcheng" bgcolor="#dddddd" width="12%"><strong>索&nbsp;引&nbsp;号</strong></td>
+                            <td class="pmingcheng" style="padding:0 5px;width:325px;" align="left" id="syh"></td>
+                            <td align="center" class="pmingcheng" bgcolor="#dddddd" width="12%"><strong>主题分类</strong></td>
+                            <td class="pmingcheng" style="padding:0 5px" align="left" id="ztfl"></td>
+                        </tr>
+                        <tr>
+                            <td height="15" align="center" class="pmingcheng"  bgcolor="#dddddd" width="12%"><strong>信息来源</strong></td>
+                            <td class="pmingcheng" style="padding:0 5px;width:325px;" align="left" id="xxly"></td>
+                            <td align="center" class="pmingcheng" bgcolor="#dddddd" width="12%"><strong>发布日期</strong></td>
+                            <td class="pmingcheng" style="padding:0 5px" align="left" id="scrq"></td>
+                        </tr>
+                        <tr>
+                            <td height="25" align="center" class="pmingcheng" bgcolor="#dddddd"><strong>公文名称</strong></td>
+                            <td colspan="3" class="pmingcheng" style="padding:0 5px" align="left" id="gwmc"></td>
+                        </tr>
+                        <tr>
+                            <td height="15"  align="center" class="pmingcheng" bgcolor="#dddddd" width="12%"><strong>主&nbsp;题&nbsp;词</strong></td>
+                            <td class="pmingcheng" style="padding:0 5px;width:325px;" align="left" id="ztc"></td>
+                            <td align="center" class="pmingcheng" bgcolor="#dddddd" width="12%"><strong>文&nbsp;&nbsp;&nbsp;&nbsp;号</strong></td>
+                            <td class="pmingcheng" style="padding:0 5px;" align="left" id="wh"></td>
+                        </tr>
+                        <tr id="yxxTr">
+                            <td height="25" align="center" class="pmingcheng" bgcolor="#dddddd" ><strong>有&nbsp;效&nbsp;性</strong></td>
+                            <td colspan="3" class="pmingcheng" style="padding:0 5px" align="left" id="yxx"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div id="htmlContent">
+                    
+                    </div>
+					
+		    <style>
+                            .otherCont {
+                                border-top: 2px solid #2a68a4;
+                                margin: 20px auto 0;
+                                padding-top: 20px;
+                            }
+
+                            .downTit {
+                                color: #425C98;
+                                font-weight: bold;
+                                font-size: 18px;
+                            }
+
+                            .otherCont p {
+                                margin-top: 20px;
+                            }
+
+                            .downIcon {
+                                height: 20px;
+                                display: inline-block;
+                                margin-right: 15px;
+                                margin-top: 5px;
+                            }
+                        </style>
+                        <div class="otherCont" id="otherCont" style="display:none;">
+                            <div class="related" id="related">
+                                <div class="downTit">相关文章</div>
+                                <div id="relatedContent">
+	                                
+                                </div>
+                            </div>
+                            <div class="download" id="downloadDiv">
+                                <div class="downTit">文档下载</div>
+                                <p id="wzbP"><img class="downIcon" src="images/icon-word.png" alt=""><a id="wzbA" href="#"></a></p>
+                                <p id="tpbP"><img class="downIcon" src="images/icon-pdf.png" alt=""><a id="tpbA" href="#"></a></p>
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="info clearfix w1100">
+        <div class="txt fl">
+			<div class="info clearfix w1100" >
+				<div class="jg fl" style="width:0px; margin:0px 0 0 180px;">
+					<script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/33/000/0000/60410035/CA330000000604100350001.js' type='text/javascript'%3E%3C/script%3E"));</script>				</div>
+				<div class="txt fl" style="margin-left:80px; width:550px;">
+					<p>中文域名：民政部.政务 
+						<a href="http://www.mca.gov.cn/article/lxwm/" target="_blank" style="color:#fff;text-decoration:none;" >联系我们</a>
+					</p>
+		            <p>版权所有：中华人民共和国民政部 　网站标识码：bm12000003 &nbsp; </p>
+		            <p>ICP备案编号：京ICP备13012430号 
+					    <img src="pc/images/gh_sma.png">
+		            	<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700079" target="_blank" style="color:#fff;text-decoration:none;">京公网安备11040102700079号　</a>
+		            </p>
+				</div>
+<div class="fl" style="width: 60px; margin: 16px 0 0 0px;" >
+            <script id="_jiucuo_" sitecode='bm12000003' src='https://zfwzgl.www.gov.cn/exposure/jiucuo.js'></script>
+                                </div>		
+	</div>
+			</div>
+		</div>
+		
+</div>
+<script type="text/javascript">
+$(function () {
+    $(".leftsidebar li label").click(function () {
+        $(".leftsidebar li label").css({
+            "background-color": "#fff",
+            color: "#2d66a5",
+        });
+
+        $(this).css({ "background-color": "#2d66a5", color: "#fff" });
+    });
+
+    $(".cd-accordion-menu ul ul a").click(function () {
+        $(".cd-accordion-menu ul ul a").css({
+            "background-color": "#fff",
+            "font-weight": "400",
+        });
+        $(this).css({ "background-color": "#e7f5ff", "font-weight": "bold" });
+    });
+
+    $(".subcat a").click(function () {
+        $(".subcat a").css({
+            "background-color": "#fff",
+            "font-weight": "400",
+        });
+        $(this).css({ "background-color": "#e7f5ff", "font-weight": "bold" });
+    });
+});
+</script>
+</body>
+</html>

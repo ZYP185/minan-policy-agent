@@ -1,0 +1,24 @@
+# 构建上下文瘦身。注意：**绝不能写一条 data/ 全排**——
+# 那会把 data/policies 和 data/structured 一起排掉，镜像里政策库是空的，
+# 界面能打开但一条政策都搜不到，而且不会有任何报错。
+
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# 开发期探测脚本，运行时用不到
+_probe/
+tests/
+
+# 抓取缓存（含 html 快照与自检输出，后者可能残留脱敏后的 Key 片段）
+data/cache/
+
+.git/
+.gitignore
+.env
+.venv/
+venv/
+
+# 文档不进镜像
+*.md

@@ -1,0 +1,64 @@
+{
+  "policy_id": "p629c5fdf",
+  "title": "关于推进互助性养老服务发展的意见",
+  "target_group": [
+    "老年人",
+    "特殊困难老年人",
+    "独居、空巢、失能、重残等特殊家庭老年人",
+    "居住偏远、相关公共服务难以覆盖的老年人",
+    "高龄、失能、残疾老年人",
+    "计划生育特殊家庭老年人",
+    "残疾老年人",
+    "低龄健康老年人"
+  ],
+  "benefit": [
+    {
+      "type": "服务",
+      "standard": "助餐、助洁、助行、助医、助急、助康和疾病防治宣传等服务",
+      "condition": "特殊困难老年人"
+    },
+    {
+      "type": "服务",
+      "standard": "探访关爱服务",
+      "condition": "独居、空巢、失能、重残等特殊家庭老年人"
+    },
+    {
+      "type": "服务",
+      "standard": "康复护理、健康教育、传染病预防等服务",
+      "condition": "有条件的地方依托乡镇卫生院、村卫生室开展"
+    },
+    {
+      "type": "服务",
+      "standard": "非营利性康复辅助器具租赁服务",
+      "condition": "在村（社区）设立“互助物资共享站”"
+    },
+    {
+      "type": "服务",
+      "standard": "代买代办、寻医送药、探访关爱、助餐助洁、精神慰藉等服务",
+      "condition": "高龄、失能、残疾老年人"
+    },
+    {
+      "type": "服务",
+      "standard": "“养老顾问”服务",
+      "condition": "基层老年协会、老年人体育协会等涉老组织"
+    },
+    {
+      "type": "服务",
+      "standard": "意外伤害保险",
+      "condition": "有条件的地方可为参与互助性养老服务的人员购买"
+    }
+  ],
+  "materials": [],
+  "process": [],
+  "handler": "",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "养老",
+  "region": "全国",
+  "eligibility_rules": [],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 3830
+}
