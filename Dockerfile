@@ -6,12 +6,16 @@ FROM python:3.13-slim
 
 # PYTHONUNBUFFERED 是刚需：不设的话容器日志里看不到 boot() 的输出，
 # 冷启动出问题只能干瞪眼。PYTHONUTF8 保证中文路径与输出不乱码。
+#
+# 这里**刻意不设 POLICY_AGENT_PORT**。config.py 里它的优先级高于 PORT，
+# 一旦写死 8848，云平台通过 $PORT 指定的端口就会被忽略——容器起来了、
+# 服务也在跑，平台却探测不到端口，表现为莫名其妙的部署失败。
+# 不设的话 PORT 生效（Render 等平台），本地 docker run 则回退到 8848。
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUTF8=1 \
     TZ=Asia/Shanghai \
-    POLICY_AGENT_HOST=0.0.0.0 \
-    POLICY_AGENT_PORT=8848
+    POLICY_AGENT_HOST=0.0.0.0
 
 # tzdata 显式装一次。core/store.py 用 date.today() 判政策是否已废止，
 # 容器默认 UTC 会比北京时间早 8 小时翻成"已过期"——这个演示里
@@ -31,6 +35,7 @@ COPY ingest/ ingest/
 COPY data/policies/ data/policies/
 COPY data/structured/ data/structured/
 
+# 本地 docker run -p 8848:8848 用的默认端口。云平台会通过 $PORT 覆盖。
 EXPOSE 8848
 
 # 用 -m web.server 而不是 run.py：后者会调 webbrowser.open()，
