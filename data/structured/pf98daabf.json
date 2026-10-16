@@ -1,0 +1,33 @@
+{
+  "policy_id": "pf98daabf",
+  "title": "财政部国家医保局关于提前下达2025年中央财政城乡居民基本医疗保险补助预算的通知",
+  "target_group": [
+    "城乡居民基本医疗保险参保人员"
+  ],
+  "benefit": [
+    {
+      "type": "现金补贴",
+      "standard": "",
+      "condition": "城乡居民基本医疗保险参保人员"
+    }
+  ],
+  "materials": [],
+  "process": [
+    "待2025年预算年度开始后，按程序按进度拨付使用。",
+    "各级财政部门要在预算管理一体化系统及时接收登录预算指标，并保持“追踪”标识不变。",
+    "依托预算管理一体化系统转移支付监控模块，加强日常监管。",
+    "按有关要求做好预算编制、安排等相关工作。",
+    "完善绩效目标管理，做好绩效监控和绩效评价。"
+  ],
+  "handler": "",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "医疗",
+  "region": "全国",
+  "eligibility_rules": [],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 600
+}

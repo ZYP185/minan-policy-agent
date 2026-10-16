@@ -104,6 +104,22 @@ header.topbar {
 }
 .mode-btn:hover:not([aria-selected="true"]) { color: var(--ink-1); }
 
+/* 长辈模式开关 */
+.size-btn {
+  border: 1px solid var(--border); background: var(--surface-1);
+  color: var(--ink-2); font: inherit; font-size: 13px;
+  padding: 6px 13px; border-radius: 7px; cursor: pointer; margin-left: 10px;
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
+}
+.size-btn:hover { border-color: var(--accent); color: var(--ink-1); }
+.size-btn[aria-pressed="true"] {
+  background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600;
+}
+html[data-elder="1"] .size-btn[aria-pressed="true"] { color: #fff; }
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .size-btn[aria-pressed="true"] { color: #0d0d0d; }
+}
+
 .main { display: grid; grid-template-columns: 268px minmax(0,1fr) 320px;
   flex: 1; min-height: 0; }
 
@@ -218,11 +234,6 @@ aside.right { border-left: 1px solid var(--border); }
 .verdict.warning  { color: var(--ink-1); }
 .verdict.serious  { color: var(--ink-1); }
 .verdict.critical { color: var(--critical); }
-.verdict .dot { width: 8px; height: 8px; border-radius: 50%; flex: 0 0 8px; }
-.verdict.good .dot     { background: var(--good); }
-.verdict.warning .dot  { background: var(--warning); }
-.verdict.serious .dot  { background: var(--serious); }
-.verdict.critical .dot { background: var(--critical); }
 
 /* 政策匹配条目 */
 .match {
@@ -375,6 +386,82 @@ textarea::placeholder { color: var(--ink-3); }
   border: 2px solid var(--surface-1); }
 ::-webkit-scrollbar-track { background: transparent; }
 
+/* ── 长辈模式 ──────────────────────────────────────────────────────────
+   服务对象里有大量老年人：字号要够大、行距要够松、可点区域要够大。
+   用叠加式覆盖而不是重构字号体系——上面的样式一行不动，
+   所以标准模式的表现完全不受影响，也不会因为改错而破坏已有布局。   */
+html[data-elder="1"] body { font-size: 18px; line-height: 1.95; }
+html[data-elder="1"] .bubble h3 { font-size: 19px; margin: 20px 0 10px; }
+html[data-elder="1"] .bubble p { margin: 11px 0; }
+html[data-elder="1"] .bubble li { margin: 6px 0; }
+html[data-elder="1"] .bubble code { font-size: 15.5px; }
+html[data-elder="1"] .msg { margin-bottom: 28px; }
+html[data-elder="1"] .msg.user .bubble { padding: 14px 19px; }
+html[data-elder="1"] .msg.agent .bubble { padding: 18px 22px; }
+
+/* 顶栏与切换按钮：触控目标要够大 */
+html[data-elder="1"] .topbar { height: 66px; flex: 0 0 66px; }
+html[data-elder="1"] .brand .logo { font-size: 20px; }
+html[data-elder="1"] .brand .sub { font-size: 14px; }
+html[data-elder="1"] .mode-btn,
+html[data-elder="1"] .size-btn { font-size: 16px; padding: 9px 18px; }
+
+/* 对话流 */
+html[data-elder="1"] .stream { padding: 28px 30px 10px; }
+html[data-elder="1"] .cite { font-size: 14.5px; }
+
+/* 工具调用轨迹 —— 老年人最需要看清"它在做什么" */
+html[data-elder="1"] .step { font-size: 15.5px; padding: 7px 15px 7px 11px; gap: 11px; }
+html[data-elder="1"] .step .glyph { width: 17px; height: 17px; flex: 0 0 17px; font-size: 11px; }
+
+/* 卡片 */
+html[data-elder="1"] .card-head { font-size: 16px; padding: 14px 18px; }
+html[data-elder="1"] .card-head .kind { font-size: 13px; }
+html[data-elder="1"] .card-body { padding: 17px 18px; }
+html[data-elder="1"] .kpi .k-label { font-size: 14px; }
+html[data-elder="1"] .kpi .k-value { font-size: 30px; }
+html[data-elder="1"] .verdict { font-size: 15px; }
+html[data-elder="1"] .verdict svg { width: 16px; height: 16px; flex: 0 0 16px; }
+html[data-elder="1"] .match { padding: 15px 16px; margin-bottom: 12px; }
+html[data-elder="1"] .match-name { font-size: 17px; }
+html[data-elder="1"] .match-reason,
+html[data-elder="1"] .match-benefit,
+html[data-elder="1"] .rules { font-size: 15.5px; }
+html[data-elder="1"] .tag { font-size: 13.5px; padding: 3px 9px; }
+html[data-elder="1"] .mat span { font-size: 15.5px; padding: 7px 14px; }
+html[data-elder="1"] .form-row { font-size: 16.5px; padding: 8px 0; }
+html[data-elder="1"] .form-row .k { flex: 0 0 128px; }
+
+/* 办理流程步骤条：圆圈和连接线要同步放大，否则会错位 */
+html[data-elder="1"] .steps li { font-size: 16.5px; padding: 0 0 18px 38px; }
+html[data-elder="1"] .steps li::before { width: 26px; height: 26px; font-size: 14px; }
+html[data-elder="1"] .steps li::after { left: 12.5px; top: 29px; }
+
+/* 侧栏 */
+html[data-elder="1"] .panel-title { font-size: 13.5px; }
+html[data-elder="1"] .stat-row { font-size: 16px; }
+html[data-elder="1"] .prof-row { font-size: 15.5px; padding: 9px 0; }
+html[data-elder="1"] .prof-row .k { flex: 0 0 104px; }
+html[data-elder="1"] .policy-item { font-size: 15.5px; padding: 12px 13px; }
+html[data-elder="1"] .policy-item .p-meta { font-size: 14px; }
+html[data-elder="1"] .src { font-size: 15px; }
+html[data-elder="1"] .src .s-meta { font-size: 14px; }
+html[data-elder="1"] .empty-hint { font-size: 15.5px; }
+
+/* 输入区 */
+html[data-elder="1"] .chip { font-size: 15.5px; padding: 10px 16px; }
+html[data-elder="1"] textarea { font-size: 18px; }
+html[data-elder="1"] .composer-inner { padding: 13px 13px 13px 19px; }
+html[data-elder="1"] .send { font-size: 16px; padding: 12px 24px; }
+html[data-elder="1"] .welcome h2 { font-size: 25px; }
+html[data-elder="1"] .welcome p { font-size: 16px; max-width: 520px; }
+
+/* 窄屏下长辈模式也要能看：侧栏本来就隐藏，这里只调主区留白 */
+@media (max-width: 860px) {
+  html[data-elder="1"] .stream { padding: 20px 16px 8px; }
+  html[data-elder="1"] .composer { padding: 12px 16px 18px; }
+}
+
 @media (max-width: 1180px) {
   .main { grid-template-columns: 236px minmax(0,1fr); }
   aside.right { display: none; }
@@ -396,6 +483,8 @@ textarea::placeholder { color: var(--ink-3); }
       <button class="mode-btn" role="tab" data-mode="resident" aria-selected="true">居民端</button>
       <button class="mode-btn" role="tab" data-mode="worker" aria-selected="false">社区工作端</button>
     </div>
+    <button class="size-btn" id="size-btn" aria-pressed="false"
+            title="放大字号，方便老年居民阅读">大字</button>
   </header>
 
   <div class="main">
@@ -920,6 +1009,31 @@ async function openPolicy(id) {
     w.document.close();
   } catch (e) { /* 忽略 */ }
 }
+
+// ── 长辈模式 ──────────────────────────────────────────────────────────
+// 服务对象里有大量老年人。字号和行距在 CSS 里用 html[data-elder="1"] 覆盖，
+// 这里只负责切换状态和记住选择。
+const ELDER_KEY = "minan-elder";
+
+function setElder(on) {
+  document.documentElement.dataset.elder = on ? "1" : "0";
+  const btn = el("size-btn");
+  btn.setAttribute("aria-pressed", String(on));
+  btn.textContent = on ? "标准字号" : "大字";
+  btn.title = on ? "切换回标准字号" : "放大字号，方便老年居民阅读";
+  try {
+    localStorage.setItem(ELDER_KEY, on ? "1" : "0");
+  } catch (e) { /* 隐私模式下 localStorage 可能不可用，忽略即可 */ }
+}
+
+let elderOn = false;
+try {
+  elderOn = localStorage.getItem(ELDER_KEY) === "1";
+} catch (e) { /* 同上 */ }
+setElder(elderOn);
+
+el("size-btn").onclick = () =>
+  setElder(document.documentElement.dataset.elder !== "1");
 
 // ── 事件绑定 ──────────────────────────────────────────────────────────
 document.querySelectorAll(".mode-btn").forEach((b) => {

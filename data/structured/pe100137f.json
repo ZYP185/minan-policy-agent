@@ -1,0 +1,25 @@
+{
+  "policy_id": "pe100137f",
+  "title": "民政部办公厅关于进一步规范完善最低生活保障行政文书使用工作的通知",
+  "target_group": [
+    "最低生活保障申请对象"
+  ],
+  "benefit": [],
+  "materials": [],
+  "process": [
+    "民政部门受理最低生活保障申请",
+    "民政部门审核最低生活保障申请",
+    "民政部门审批最低生活保障申请"
+  ],
+  "handler": "民政部门",
+  "channel": "线下窗口、网上申请、网上审核、网上审批",
+  "duration": "",
+  "form_name": "最低生活保障申请及授权书",
+  "form_fields": [],
+  "category": "救助",
+  "region": "全国",
+  "eligibility_rules": [],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 1776
+}

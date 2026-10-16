@@ -1,0 +1,37 @@
+{
+  "policy_id": "pe2cb2dac",
+  "title": "民政部全国老龄办最高人民法院最高人民检察院公安部司法部中国老龄协会关于建立健全维护老年人合法权益工作机制的指导意见__2025年第22号国务院公报",
+  "target_group": [
+    "老年人"
+  ],
+  "benefit": [
+    {
+      "type": "服务",
+      "standard": "不受经济困难条件限制",
+      "condition": "遭受虐待、遗弃或者家庭暴力的老年人申请法律援助"
+    },
+    {
+      "type": "服务",
+      "standard": "免予核查经济困难状况",
+      "condition": "无固定生活来源的老年人、接受社会救助或司法救助的老年人申请法律援助"
+    },
+    {
+      "type": "服务",
+      "standard": "依法将符合条件的高龄、空巢、独居、失能失智、计划生育特殊家庭等老年人纳入法律援助范围",
+      "condition": "符合条件的高龄、空巢、独居、失能失智、计划生育特殊家庭等老年人"
+    }
+  ],
+  "materials": [],
+  "process": [],
+  "handler": "",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "养老",
+  "region": "全国",
+  "eligibility_rules": [],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 2886
+}

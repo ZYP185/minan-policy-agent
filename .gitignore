@@ -17,3 +17,12 @@ data/cache/
 *.swp
 Thumbs.db
 desktop.ini
+
+# 被审计剔除的非政策条目（新闻稿/讲话/公示），不进仓库
+data/quarantine/
+
+# 语料挖掘的中间产物：原始 HTML 快照、候选池、调试脚本。
+# 体积大且无长期价值，工具本身（ingest/hunt.py）已单独入库。
+_probe/raw/
+_probe/*.txt
+

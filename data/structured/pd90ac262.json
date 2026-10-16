@@ -1,0 +1,36 @@
+{
+  "policy_id": "pd90ac262",
+  "title": "关于保障性租赁住房有关贷款不纳入房地产贷款集中度管理的通知",
+  "target_group": [
+    "银行业金融机构",
+    "持有保障性租赁住房项目认定书的保障性租赁住房项目",
+    "执行房地产贷款集中度管理制度的银行业金融机构"
+  ],
+  "benefit": [
+    {
+      "type": "费用减免",
+      "standard": "不纳入房地产贷款集中度管理",
+      "condition": "银行业金融机构向持有保障性租赁住房项目认定书的保障性租赁住房项目发放的有关贷款"
+    }
+  ],
+  "materials": [],
+  "process": [],
+  "handler": "",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "住房",
+  "region": "全国",
+  "eligibility_rules": [
+    {
+      "field": "housing",
+      "op": "contains",
+      "value": "保障性租赁住房项目认定书",
+      "desc": "项目须持有保障性租赁住房项目认定书"
+    }
+  ],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 571
+}

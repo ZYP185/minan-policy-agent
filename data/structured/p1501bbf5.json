@@ -1,0 +1,27 @@
+{
+  "policy_id": "p1501bbf5",
+  "title": "关于严禁养老机构违法违规开展医疗服务的通知",
+  "target_group": [
+    "养老机构",
+    "养老机构内设医疗机构",
+    "养老机构内无执业资质的机构",
+    "养老机构内无行医资质的相关人员",
+    "养老机构内设医疗机构的医师",
+    "养老机构内设医疗机构使用的卫生技术人员",
+    "入住老年人"
+  ],
+  "benefit": [],
+  "materials": [],
+  "process": [],
+  "handler": "",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "养老",
+  "region": "全国",
+  "eligibility_rules": [],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 1293
+}

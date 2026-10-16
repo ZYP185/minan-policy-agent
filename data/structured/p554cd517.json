@@ -1,0 +1,18 @@
+{
+  "policy_id": "p554cd517",
+  "title": "关于印发《关于进一步促进养老服务消费提升老年人生活品质的若干措施》的通知",
+  "target_group": [],
+  "benefit": [],
+  "materials": [],
+  "process": [],
+  "handler": "",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "养老",
+  "region": "",
+  "eligibility_rules": [],
+  "_extracted": false,
+  "_error": "JSONDecodeError: Expecting ',' delimiter: line 313 column 6 (char 7813)"
+}

@@ -1,0 +1,86 @@
+# 候选站点清单：名称 URL（空格或 Tab 分隔）
+# 用于 python -m ingest.hunt，筛出可批量入库的政策栏目入口
+# 抽查跨省，目的是测可抓率的真实分布，不是穷举
+
+# ── 江苏（昆山已验证可抓）
+江苏 昆山市    https://www.ks.gov.cn/
+江苏 江阴市    https://www.jiangyin.gov.cn/
+江苏 常熟市    https://www.changshu.gov.cn/
+江苏 张家港市  https://www.zjg.gov.cn/
+江苏 太仓市    https://www.taicang.gov.cn/
+江苏 宜兴市    https://www.yixing.gov.cn/
+江苏 溧阳市    https://www.liyang.gov.cn/
+
+# ── 浙江
+浙江 义乌市    https://www.yw.gov.cn/
+浙江 温岭市    https://www.wl.gov.cn/
+浙江 瑞安市    https://www.ruian.gov.cn/
+浙江 乐清市    https://www.yueqing.gov.cn/
+浙江 海宁市    https://www.haining.gov.cn/
+浙江 桐乡市    https://www.tongxiang.gov.cn/
+浙江 余姚市    https://www.yy.gov.cn/
+浙江 诸暨市    https://www.zhuji.gov.cn/
+
+# ── 上海（已有 7 份，再看区级）
+上海 浦东新区  https://www.pudong.gov.cn/
+上海 徐汇区    https://www.xuhui.gov.cn/
+上海 静安区    https://www.jingan.gov.cn/
+上海 闵行区    https://www.shmh.gov.cn/
+上海 宝山区    https://www.shbsq.gov.cn/
+
+# ── 山东（寿光已验证可抓）
+山东 寿光市    https://www.shouguang.gov.cn/
+山东 诸城市    https://www.zhucheng.gov.cn/
+山东 龙口市    https://www.longkou.gov.cn/
+山东 荣成市    https://www.rongcheng.gov.cn/
+山东 邹城市    https://www.zoucheng.gov.cn/
+山东 滕州市    https://www.tengzhou.gov.cn/
+山东 肥城市    https://www.feicheng.gov.cn/
+
+# ── 福建
+福建 晋江市    https://www.jinjiang.gov.cn/
+福建 福清市    https://www.fuqing.gov.cn/
+福建 南安市    https://www.nanan.gov.cn/
+福建 石狮市    https://www.shishi.gov.cn/
+
+# ── 广东
+广东 普宁市    https://www.puning.gov.cn/
+广东 四会市    https://www.sihui.gov.cn/
+广东 开平市    https://www.kaiping.gov.cn/
+广东 高州市    https://www.gaozhou.gov.cn/
+广东 鹤山市    https://www.heshan.gov.cn/
+
+# ── 河南
+河南 巩义市    https://www.gongyi.gov.cn/
+河南 荥阳市    https://www.xingyang.gov.cn/
+河南 新密市    https://www.xinmi.gov.cn/
+河南 登封市    https://www.dengfeng.gov.cn/
+
+# ── 湖北
+湖北 潜江市    https://www.hbqj.gov.cn/
+湖北 天门市    https://www.tianmen.gov.cn/
+湖北 大冶市    https://www.daye.gov.cn/
+湖北 宜都市    https://www.yidu.gov.cn/
+
+# ── 湖南
+湖南 醴陵市    https://www.liling.gov.cn/
+湖南 宁乡市    https://www.nxgov.cn/
+
+# ── 四川
+四川 都江堰市  https://www.djy.gov.cn/
+四川 彭州市    https://www.pengzhou.gov.cn/
+四川 崇州市    https://www.chongzhou.gov.cn/
+四川 邛崃市    https://www.qionglai.gov.cn/
+
+# ── 河北 / 辽宁
+河北 迁安市    https://www.qianan.gov.cn/
+河北 武安市    https://www.wuan.gov.cn/
+辽宁 海城市    https://www.haicheng.gov.cn/
+辽宁 瓦房店市  https://www.wfd.gov.cn/
+辽宁 庄河市    https://www.zhuanghe.gov.cn/
+
+# ── 直辖市辖区
+北京 朝阳区    https://www.bjchy.gov.cn/
+北京 海淀区    https://www.bjhd.gov.cn/
+天津 武清区    https://www.tjwq.gov.cn/
+重庆 渝北区    https://www.yubei.gov.cn/

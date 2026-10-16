@@ -1,0 +1,30 @@
+{
+  "policy_id": "p34a99faa",
+  "title": "关于育儿补贴有关个人所得税政策的公告",
+  "target_group": [
+    "按照育儿补贴制度规定发放育儿补贴的人员"
+  ],
+  "benefit": [
+    {
+      "type": "费用减免",
+      "standard": "免征个人所得税",
+      "condition": "按照育儿补贴制度规定发放的育儿补贴"
+    }
+  ],
+  "materials": [],
+  "process": [
+    "卫生健康部门与财政部门、税务部门建立信息共享机制。",
+    "县级卫生健康部门按规定为申领补贴的人员办理个人所得税免税申报。"
+  ],
+  "handler": "县级卫生健康部门",
+  "channel": "",
+  "duration": "",
+  "form_name": "",
+  "form_fields": [],
+  "category": "生育",
+  "region": "全国",
+  "eligibility_rules": [],
+  "_extracted": true,
+  "_error": "",
+  "_source_chars": 757
+}

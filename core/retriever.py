@@ -78,8 +78,14 @@ class Retriever:
         allowed = self._allowed_ids(region, category, valid_only)
         qtokens = tokenize(query)
 
-        # 多取一些候选，因为要按元数据过滤掉一部分
-        raw = self._index.search(qtokens, top_k=min(len(self._pool), max(top_k * 6, 40)))
+        # 候选池要按 TOP_K_RETRIEVE 取，不能按 top_k。
+        # 原因：重排是"从候选里挑"，如果候选池被 top_k 截断，
+        # BM25 排在第 6-12 名、但语义上最相关的条款就永远没机会被看到。
+        # 实测过：问「生孩子有什么补贴可以领」，正确的育儿补贴政策
+        # BM25 只排到第 7（字面只共享"补贴"两个字），
+        # top_k=5 时它进不了候选池，重排也无从救起。
+        pool_n = max(top_k, config.TOP_K_RETRIEVE) if rerank else top_k
+        raw = self._index.search(qtokens, top_k=min(len(self._pool), max(pool_n * 6, 40)))
 
         hits: list[Hit] = []
         for idx, score in raw:
@@ -90,12 +96,12 @@ class Retriever:
             if not p:
                 continue
             hits.append(Hit(clause=c, policy=p, bm25=score))
-            if len(hits) >= top_k:
+            if len(hits) >= pool_n:
                 break
 
         if rerank and self.llm and len(hits) > 1:
             hits = self._llm_rerank(query, hits)
-        return hits
+        return hits[:top_k]
 
     # --------------------------------------------------------- 元数据过滤
     def _allowed_ids(
