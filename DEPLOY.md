@@ -24,9 +24,17 @@ python run.py
 
 ---
 
-## 一、推到 GitHub（**私有**仓库）
+## 一、推到 GitHub
 
-竞赛期间代码公开有被抄的风险，用私有仓库——Render 支持连私有仓库。
+> **当前状态：仓库已建好并推送完成**
+> `https://github.com/ZYP185/minan-policy-agent`（**公开**仓库，99 份政策已入库）
+>
+> ⚠️ 公开仓库意味着同场竞争者能看到全部源码、语料和文档。
+> 这是有意选择——如果比赛不要求开源，建议改成 Private
+> （Settings → General → Danger Zone → Change visibility），
+> Render 同样支持从私有仓库部署。
+
+如果要从零重建：
 
 ```powershell
 cd "E:\桌面\C语言\policy-agent"
@@ -36,7 +44,7 @@ git status          # ← 务必看一眼：不该出现 .env、data/cache/
 git commit -m "民安 · 社区民生政策服务智能体"
 ```
 
-然后在 GitHub 上新建一个 **Private** 仓库，按页面提示推送：
+然后在 GitHub 上新建仓库（公开或私有），按页面提示推送：
 
 ```powershell
 git remote add origin https://github.com/<你的用户名>/<仓库名>.git
@@ -73,13 +81,13 @@ git push -u origin main
 构建日志里应当看到：
 
 ```
-  36 份政策 / 1295 条条款 / 地域 ...
-  索引就绪：... 条条款
+  99 份政策 / 2862 条条款 / 地域 上海市、北京市、西安市 ...
+  索引就绪：2862 条条款
   监听：0.0.0.0:<端口>
   登录账号：judge
 ```
 
-**要是看到"36 份政策"里数字是 0**，说明 `.dockerignore` 把 `data/` 排掉了，
+**要是政策数显示 0**，说明 `.dockerignore` 把 `data/` 排掉了，
 政策库没进镜像。文件里已经写了注释警告这一点，别改坏。
 
 ---

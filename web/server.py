@@ -34,7 +34,16 @@ MAX_BODY = 1 << 20                    # 请求体上限 1MB
 # ---------------------------------------------------------------- 访问认证
 # 无状态签名 token：token = "<签发时间戳>.<HMAC 前 32 位>"。
 # 不用服务端 session 表，换来的是重启不掉线、也不必写 TTL 清理。
-_SESSION_SECRET = config.SESSION_SECRET or secrets.token_bytes(32)
+#
+# 必须统一成 bytes 再交给 hmac：环境变量读出来是 str，随机生成是 bytes，
+# 两条路径类型不一致的话，只有「设了 POLICY_AGENT_SECRET」的那条会崩。
+# 那个组合恰好是线上（Render 的 generateValue）——本地不设密钥，
+# 永远走不到坏的那条，登录看着一切正常，一部署就全员登录失败。
+_SESSION_SECRET = (
+    config.SESSION_SECRET.encode("utf-8")
+    if config.SESSION_SECRET
+    else secrets.token_bytes(32)
+)
 _LAST_SEEN: dict[str, float] = {}     # sid → 最后活跃时间，用于空闲回收
 _RATE_HIT: dict[str, list[float]] = {}  # sid → 最近调用时刻，用于每分钟限流
 _RATE_DAY = {"day": "", "count": 0}    # 全局每日额度

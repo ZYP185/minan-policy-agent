@@ -18,6 +18,7 @@ OFFLINE = [
     ("扩库/巡检/覆盖自知", "test_ingest_extras.py"),
     ("全链路自检（解析→入库→检索→规则引擎）", None),   # 特殊：用 -m
     ("Web 层（认证闸门 / 请求体加固 / 会话收尾）", "test_server.py"),
+    ("部署前验收（对外监听 + 强制认证 + 字符串 SECRET）", "test_deploy_sim.py"),
     ("前端静态检查（JS 语法 / id / 卡片渲染器）", "check_frontend.py"),
 ]
 ONLINE = [
